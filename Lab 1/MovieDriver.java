@@ -6,8 +6,6 @@ public class MovieDriver {
         // Create a new object of type Scanner that reads from the keyboard
         Scanner scanner = new Scanner(System.in);
 
-        // Loop for entering information for multiple movies
-        while (true) {
             // Create a new movie object
             Movie movie = new Movie();
 
@@ -37,17 +35,8 @@ public class MovieDriver {
             System.out.println("Movie Information:");
             System.out.println(movie.toString());
 
-            // Ask the user if they want to enter another movie
-            System.out.println("Do you want to enter another? (y or n): ");
-            String continueResponse = scanner.nextLine().toLowerCase();
-
-            // Check if the user wants to continue, break the loop if not
-            if (!continueResponse.equals("y")) {
-                break;
-            }
-        }
-
         // Close the scanner outside the loop
         scanner.close();
     }
+
 }
